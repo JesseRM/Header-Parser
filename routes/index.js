@@ -2,7 +2,8 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    const ip = req.ip;
+    
+    const ip = req.connection.remoteAddress;
     const os = req.headers['user-agent'];
     const language = req.headers['accept-language'];
     
