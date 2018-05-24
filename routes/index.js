@@ -3,7 +3,7 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
     
-    const ip = req.connection.remoteAddress;
+    const ip = req.ip;
     const os = req.headers['user-agent'];
     const language = req.headers['accept-language'];
     
